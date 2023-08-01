@@ -159,9 +159,9 @@ let drawOneMore = () => {
   setTimeout(drawOneMore, delay);
 }
 let context = document.getElementById('myCanvas').getContext('2d');
-let maxDimension = Math.max(
-	context.canvas.parentElement.clientWidth,
-  context.canvas.parentElement.clientHeight,
+let maxDimension = Math.min(
+  document.body.clientWidth,
+  document.body.clientHeight
 );
 context.canvas.width = maxDimension;
 context.canvas.height = maxDimension;
