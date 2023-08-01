@@ -160,8 +160,8 @@ let drawOneMore = () => {
 }
 let context = document.getElementById('myCanvas').getContext('2d');
 let maxDimension = Math.min(
-  document.body.clientWidth,
-  document.body.clientHeight
+  window.innerWidth,
+  window.innerHeight
 );
 context.canvas.width = maxDimension;
 context.canvas.height = maxDimension;
